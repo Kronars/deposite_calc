@@ -1,14 +1,13 @@
 import json
 
-from flask import Flask
 from flask import request, Response
 
+from flaskr import create_app
 from validation import deposite_valid
 from calculation import deposite_calc, increase_days
 
 
-app = Flask(__name__)
-client = Flask.test_client()
+app = create_app()
 
 
 @app.route('/deposite/', methods=['POST'])
@@ -31,6 +30,3 @@ def deposite():
     full_resp.headers['Content-Type'] = "application/json; charset=UTF-8".encode('utf-8')
 
     return full_resp
-
-if __name__ == '__main__':
-    app.run('localhost', debug=True)
