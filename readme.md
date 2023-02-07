@@ -9,8 +9,11 @@
 Сборка и запуск:
 
 > docker build -t flask_calc .
+
 > docker run -ip 5000:5000 flask_calc
 
 ## Задание:
 
-![](Test_task.png)
+<!-- ![](Test_task.png) -->
+
+<img src="https://github.com/Kronars/deposite_calc/raw/master/Test_task.png" width=70% height=70%>
