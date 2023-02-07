@@ -4,10 +4,10 @@ WORKDIR /usr/src/deposite_calc
 
 COPY ./requirements.txt .
 COPY ./app ./app
-COPY ./tests ./tests
+# COPY ./tests ./tests
 
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
-ENTRYPOINT [ "flask",  "--app", ".", "run"]
+ENTRYPOINT [ "flask",  "--app", "./app", "run", "--host=0.0.0.0"]
