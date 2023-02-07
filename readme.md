@@ -6,6 +6,11 @@
 
 `sketch.ipynb` - наброски которые делал во время работы например разбор и проверка алгоритма расчёта 
 
+Сборка и запуск:
+
+> docker build -t flask_calc .
+> docker run -ip 5000:5000 flask_calc
+
 ## Задание:
 
 ![](Test_task.png)
