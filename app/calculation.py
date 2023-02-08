@@ -26,9 +26,10 @@ def increase_days(req_json) -> list:
         year = start_date.year
         month = (start_date.month + month_shift) % 12
 
+        month = 12 if month == 0 else month
+
         if month < start_date.month: # Если произошло переполнение месяца
             year += 1
-            month += 1
 
         month_days = calendar.monthdayscalendar(year=year, month=month)
         last_day = max(month_days[-1])
@@ -36,5 +37,5 @@ def increase_days(req_json) -> list:
         inc_dates.append(
             datetime.date(year, month, last_day).strftime('%d.%m.%Y')
         )
-    
+
     return inc_dates

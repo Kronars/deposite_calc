@@ -40,8 +40,8 @@ def test_deposite_dates_boundary(client: FlaskClient):
     answer = {
         "31.10.2021": 10066.67,
         "30.11.2021": 10133.78,
-        "31.01.2022": 10201.34,
-        "28.02.2022": 10269.35
+        "31.12.2021": 10201.34,
+        "31.01.2022": 10269.35
     }
 
     resp = client.post('/deposite/', json=data)
